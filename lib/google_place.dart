@@ -2,6 +2,7 @@ library google_place;
 
 import 'package:google_place/src/autocomplete/autocomplete.dart';
 import 'package:google_place/src/details/details.dart';
+import 'package:google_place/src/geocoding/geocoding.dart';
 import 'package:google_place/src/photos/photos.dart';
 import 'package:google_place/src/query_autocomplete/query_autocomplete.dart';
 import 'package:google_place/src/search/search.dart';
@@ -61,6 +62,9 @@ class GooglePlace {
   /// [queryAutocomplete] provides a query prediction service for text-based geographic searches, returning suggested queries as users type.
   late QueryAutocomplete queryAutocomplete;
 
+  /// [geocoding] Get the geographic coordinates for a place_id.
+  late Geocoding geocoding;
+
   /// [timeout] timeout for http call.
   static Duration timeout = Duration(milliseconds: 1500);
 
@@ -73,14 +77,15 @@ class GooglePlace {
   final String? proxyUrl;
 
   GooglePlace(
-    this.apiKEY, {
-    this.headers = const {},
-    this.proxyUrl,
-  }) {
+      this.apiKEY, {
+        this.headers = const {},
+        this.proxyUrl,
+      }) {
     this.search = Search(apiKEY, headers, proxyUrl);
     this.details = Details(apiKEY, headers, proxyUrl);
     this.photos = Photos(apiKEY, headers, proxyUrl);
     this.autocomplete = Autocomplete(apiKEY, headers, proxyUrl);
     this.queryAutocomplete = QueryAutocomplete(apiKEY, headers, proxyUrl);
+    this.geocoding = Geocoding(apiKEY, headers, proxyUrl);
   }
 }
