@@ -13,6 +13,7 @@ The following place requests are available:
 3. [Place Photos](https://developers.google.com/places/web-service/photos) provides access to the millions of place-related photos stored in Google's Place database.
 4. [Place Autocomplete](https://developers.google.com/places/web-service/autocomplete) automatically fills in the name and/or address of a place as users type.
 5. [Query Autocomplete](https://developers.google.com/places/web-service/query) provides a query prediction service for text-based geographic searches, returning suggested queries as users type.
+6. [Geocoding](https://developers.google.com/maps/documentation/geocoding) Get the geographic coordinates for an address or place_id.
 
 ## Usage
 
