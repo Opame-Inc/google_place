@@ -40,6 +40,8 @@ export 'package:google_place/src/search/near_by_search_response.dart';
 export 'package:google_place/src/search/search_candidate.dart';
 export 'package:google_place/src/search/search_result.dart';
 export 'package:google_place/src/search/text_search_response.dart';
+export 'package:google_place/src/geocoding/geocoding_response.dart';
+export 'package:google_place/src/geocoding/geocoding_result.dart';
 
 /// The Places API is a service that returns information about places.
 /// Places are defined within this API as establishments, geographic locations, or prominent points of interest.
